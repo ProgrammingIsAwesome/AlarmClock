@@ -79,13 +79,6 @@ class WatchPanel extends JPanel implements Runnable, ActionListener {
 
 		add(addAlarm);
 		
-		// editAlarm=new JButton("Edit alarm");
-		// editAlarm.setBounds(150,60,120,40);
-		// editAlarm.addActionListener(this);
-		// add(editAlarm);
-		
-		
-		
 		String[] times =new String[24];
 		for(int j=0;j<times.length;j++){
 			times[j]=""+j;
@@ -132,7 +125,6 @@ class WatchPanel extends JPanel implements Runnable, ActionListener {
 		System.out.println(new JLabel().getFont());
 		JLabel snoozeTitle=new JLabel("Snooze (mins)");
 		snoozeTitle.setBounds(100,200,120,40);
-		// snoozeTitle.setFont(new Font("Dialog", Font.BOLD, 9));
 		add(snoozeTitle);
         if (runner == null) {
             runner = new Thread(this);
@@ -199,7 +191,6 @@ class WatchPanel extends JPanel implements Runnable, ActionListener {
 				listOfAlarms.get(j).minusButton.setVisible(false);
 				listOfAlarms.get(j).snoozeButton.setVisible(false);
 				for(int k=j+1;k<listOfAlarms.size();k++){
-					// setLayout(null);
 					listOfAlarms.get(k).minusButton.setBounds(200,170+k*30,50,20);
 					listOfAlarms.get(k).snoozeButton.setBounds(270,170+k*30,100,20);
 				}
